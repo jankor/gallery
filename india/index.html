@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='./style.css' rel='stylesheet' type='text/css'>  
+  <style>
+    body {margin: 0}
+    
+    .container {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <section class='parallax-container' style='height: 1050px;'>
+    <img class="parallax" src="./photos/01.jpg" />    
+  </section>
+  <section class='parallax-container' style='height: 1850px;'>
+    <img class="parallax" src="./photos/08.jpg" />
+  </section>
+</div>
+<script src="./parallax.js"></script>    
+  <script>
+    // Accepts any class name
+    var parallax = new Parallax('.parallax', {})
+    
+    parallax.init()
+  </script>
+</body>
+</html>
