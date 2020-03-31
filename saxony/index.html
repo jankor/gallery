@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    body {margin: 0}
+    img {max-width: 100%}
+    .container {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container">  
+    
+</div>
+
+
+<script src="../parallax.js"></script>
+<script src="../script.js"></script>
+
+  <script>
+    loadImages(24)
+    // Accepts any class name
+    var image = document.getElementsByClassName('parallax');
+    new simpleParallax(image, {
+      orientation: 'up',
+      scale: 1.1});
+  </script>
+</body>
+</html>
