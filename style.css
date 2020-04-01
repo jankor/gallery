@@ -3,9 +3,13 @@ img {max-width: 100%}
 .container {width: 100%;}
 
 .back {
-  position: absolute;
+  position: fixed;
+  width: 110px;
+  height: 100px;  
   bottom: 20px;
   right: 20px;
   z-index: 10;
   background-image: url("../backarrow.png");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
 }
