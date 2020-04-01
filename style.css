@@ -1,0 +1,11 @@
+body {margin: 0}
+img {max-width: 100%}
+.container {width: 100%;}
+
+.back {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-image: url("../backarrow.png");
+}
