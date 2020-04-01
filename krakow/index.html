@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<div class="container">  
+       
+</div>
+<a href="../" ><div class="back"></div></a>
+
+<script src="../parallax.js"></script>
+<script src="../script.js"></script>
+
+  <script>
+    loadImages(10)
+    // Accepts any class name
+    const image = document.getElementsByClassName('parallax');
+    new simpleParallax(image, {
+      orientation: 'up',
+      scale: 1.1});
+  </script>
+</body>
+</html>
