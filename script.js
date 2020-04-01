@@ -9,8 +9,11 @@ function loadImages(n) {
 }
 
 const preloader = document.querySelector('.preloader');
+let triggered = false;
 
-function fadeEffect() { 
+function fadeEffect() {
+  if (triggered) return;
+  triggered = true;
   const fadeInterval = setInterval(() => {
   // if we don't set opacity 1 in CSS, then
   // it will be equaled to "" -- that's why
@@ -28,3 +31,4 @@ function fadeEffect() {
 }
 
 window.addEventListener('load', fadeEffect);
+setTimeout(fadeEffect, 8000);
