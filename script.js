@@ -10,7 +10,8 @@ function loadImages(n) {
 
 const preloader = document.querySelector('.preloader');
 
-function fadeEffect() { setInterval(() => {
+function fadeEffect() { 
+  const fadeInterval = setInterval(() => {
   // if we don't set opacity 1 in CSS, then
   // it will be equaled to "" -- that's why
   // we check it, and if so, set opacity to 1
@@ -19,8 +20,9 @@ function fadeEffect() { setInterval(() => {
   }
   if (preloader.style.opacity > 0) {
     preloader.style.opacity -= 0.1;
-  } else {
-    clearInterval(fadeEffect);
+  } else {    
+    clearInterval(fadeInterval);    
+    preloader.parentNode.removeChild(preloader);
   }
 }, 100);
 }
