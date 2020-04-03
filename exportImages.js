@@ -11,7 +11,7 @@ const walkSync = (dir, filelist) => {
       filelist = walkSync(dir + file + '/', filelist);
     }
     else {
-      if (file.includes('jpg') && !dir.includes('headers') && !file.includes('1080')) {
+      if (file.includes('jpg') && !dir.includes('headers') && !file.includes('1125')) {
         filelist.push({dir, file});
       }      
     }
@@ -25,10 +25,9 @@ const images = walkSync(__dirname);
   
   for (const {file, dir} of images) {
     const image = sharp(dir+file)
-    const metadata = await image.metadata()
-    const resize = metadata.width > metadata.width ? {width: 1125} : {height: 1125};
+    const metadata = await image.metadata()    
     image
-      .resize(resize)
+      .resize(1125)
       .jpeg({
         quality: 55,
         chromaSubsampling: '4:2:0'
