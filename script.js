@@ -5,7 +5,7 @@ function loadImages(n) {
   const loadSQ = screenWidth * pixelRation <= 1125; // iphone width
     for (let i = 1; i <= n; i++) {
       const image = document.createElement('img');
-      image.setAttribute('src', `./photos/${loadSQ ? i+'-1080' : i}.jpg`)
+      image.setAttribute('src', `./photos/${loadSQ ? i+'-1125' : i}.jpg`)
       image.setAttribute('class', `parallax`)
       container.appendChild(image)
     }  
