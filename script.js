@@ -1,8 +1,11 @@
 function loadImages(n) {
   const container = document.getElementsByClassName('container')[0];
+  const pixelRation = window.devicePixelRatio || 1;
+  const screenWidth = window.screen.width || 2048;    
+  const loadSQ = screenWidth * pixelRation <= 1125; // iphone width
     for (let i = 1; i <= n; i++) {
       const image = document.createElement('img');
-      image.setAttribute('src', `./photos/${i}.jpg`)
+      image.setAttribute('src', `./photos/${loadSQ ? i+'-1080' : i}.jpg`)
       image.setAttribute('class', `parallax`)
       container.appendChild(image)
     }  
@@ -26,6 +29,10 @@ function fadeEffect() {
   } else {    
     clearInterval(fadeInterval);    
     preloader.parentNode.removeChild(preloader);
+    const image = document.getElementsByClassName('parallax');
+    new simpleParallax(image, {
+      orientation: 'up',
+      scale: 1.1})
   }
 }, 100);
 }

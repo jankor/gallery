@@ -1,0 +1,22 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parallax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankor/gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jankor/gallery/issues"
+  },
+  "homepage": "https://github.com/jankor/gallery#readme",
+  "dependencies": {
+    "sharp": "^0.25.2"
+  }
+}
